@@ -34,3 +34,12 @@ ActionController::RoutingError (No route matches "/cap.png" with {:method=>:get}
   -e:2
 
 Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-23 15:49:47) [GET]
+
+ActionController::RoutingError (No route matches "/cap.png" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
