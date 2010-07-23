@@ -1,0 +1,36 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-23 15:27:27) [GET]
+
+ActionController::RoutingError (No route matches "/teamshot.png" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-23 15:27:27) [GET]
+
+ActionController::RoutingError (No route matches "/socialMarket2.jpg" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-23 15:27:27) [GET]
+
+ActionController::RoutingError (No route matches "/cap.png" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-23 15:30:15) [GET]
+
+ActionController::RoutingError (No route matches "/cap.png" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
