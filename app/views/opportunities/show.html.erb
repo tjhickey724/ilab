@@ -1,0 +1,33 @@
+<p>
+  <b>Title:</b>
+  <%=h @opportunity.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @opportunity.description %>
+</p>
+
+<p>
+  <b>Impact:</b>
+  <%=h @opportunity.impact %>
+</p>
+
+<p>
+  <b>Approach:</b>
+  <%=h @opportunity.approach %>
+</p>
+
+<p>
+  <b>Commitment:</b>
+  <%=h @opportunity.commitment %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @opportunity.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_opportunity_path(@opportunity) %> |
+<%= link_to 'Back', opportunities_path %>

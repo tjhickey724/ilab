@@ -9,7 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100726141812) do
+ActiveRecord::Schema.define(:version => 20100726153909) do
+
+  create_table "opportunities", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "impact"
+    t.string   "approach"
+    t.string   "commitment"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "login",                              :null => false

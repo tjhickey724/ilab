@@ -1,0 +1,81 @@
+<h1>Idea Lab Project Proposals</h1>
+<p>
+	Welcome <%=h @current_user.login %>
+	</p>
+	
+<p>
+Please use the form below to describe an opportunity in which the Idea Lab at Brandeis
+can have an impact on the community while also allowing the students and faculty the potential
+to explore cutting edge internet and mobile technology.
+</p>
+
+<p>
+	Your responses on this form will be made public and registered users will be allowed to vote on your project
+	and to explain their vote with a comment. Registered users will also be allowed to volunteer their time or other
+	resources to this project should it go ahead. The IdeaLab team will select new projects to take on by reviewing the
+	submitted projects and comments and matching the skills and interests of each particular development team with the
+	most appropriate project. Most projects should be designed to be completed in one semester. Larger projects can be
+	decomposed into smaller projects to make this happen.
+</p>
+
+<p>
+	The goal of the IdeaLab is to provide students with a exciting opportunity to solve problems that have a substantial
+	impact on the community by applying their academic skills and knowledge and by learning how to work in a small, agile
+	development team using the latest web and mobile technology.  The projects will be selected to best advance the
+	educational mission of deepening our students understanding of Computer Science while also having maximum long-term
+	impact on the community and, ideally, the world.
+	</p>
+
+<p>Please see <a href="index.html">the opportunities page</a> for examples of previously submitted IdeaLab opportunities.
+	</p>
+	<hr/>
+
+<% form_for(@opportunity) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+  	<b><%= f.label :title %></b>
+  	Start off with a short title for your project. It should be suggestive.
+    <br/>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+  	<b><%= f.label :description %></b>
+  	Next describe the problem that is to be solved by the IdeaLab. Try not to describe your proposed solution,
+	but to explain how we can tell that the problem has been solved. What are the metrics that we should use to
+	measure the degree of success. Quantitative and qualitative measures are both fine.
+    <br />
+    <%= f.text_area :description, :size => "60x10" %>
+  </p>
+  <p><b>
+    <%= f.label :impact %></b>
+	Describe the impact a successful solution to this problem will have on the local community, and if applicable, to the global community.
+	
+	<br />
+    <%= f.text_area :impact, :size => "60x10" %>
+  </p>
+  <p>
+    <b><%= f.label :approach %></b>
+	Describe the kind of approach you think would solve this problem, including the types of technology (interactive websites, 
+	mobile applications, etc.)
+	<br />
+    <%= f.text_area :approach, :size => "60x10" %>
+  </p>
+  <p>
+    <b><%= f.label :commitment %></b>
+	What kind of commitment are you willing to make to see this problem solved. Please be as specific as possible, e.g
+	how many hours/week (or month) are you willing to work with the IdeaLab team on this project? If you have access to a budget
+	line, are you willing to hire one or more students or staff to work on this project? If you are a manager are you willing
+	to assign one of your staff to work on this project some number of hours per week?
+	<br />
+    <%= f.text_area :commitment, :size => "60x10" %>
+  </p>
+
+    <%= f.hidden_field :user_id, :value => @current_user.id %>
+
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', opportunities_path %>

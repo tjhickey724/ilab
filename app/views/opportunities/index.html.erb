@@ -1,0 +1,35 @@
+<h1 class="main">Idea Lab at Brandeis<br/> Project Page</h1>
+This page lists the most recent project requests that have been submitted to the IdeaLab.
+You can submit your own project request at <a href="new.html">this link</a> provided you are logged in.
+<ul> 
+<% @opportunities.each do |opportunity| %>
+<li>
+	<a href="#op<%=h opportunity.id %>"> <%=h opportunity.title %> = <%=h opportunity.created_at %></a>
+</li>
+<% end %>
+</ul>
+
+<% @opportunities.each do |opportunity| %>
+<div class="opportunity"> <a name="op<%=h opportunity.id %>"> </a>
+<h2><%=h opportunity.id %>: <%=h opportunity.title %></h2>
+<h3>Description of the opportunity</h3>
+<%=h opportunity.description %>
+<h3>Potential impact</h3>
+    <%=h opportunity.impact %>
+	<h3> Suggested Approach</h3>
+    <%=h opportunity.approach %>
+	<h3> Commitment of the Proposer</h3>
+    <%=h opportunity.commitment %>
+	<h3> Proposer id number</h3>
+    <%=h opportunity.user_id %>
+	<h3>Editing actions</h3>
+    <%= link_to 'Show', opportunity %>
+    <%= link_to 'Edit', edit_opportunity_path(opportunity) %>
+    <%= link_to 'Destroy', opportunity, :confirm => 'Are you sure?', :method => :delete %>
+  </div>
+<% end %>
+
+
+<br />
+
+<%= link_to 'New opportunity', new_opportunity_path %>

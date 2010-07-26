@@ -1,0 +1,36 @@
+<h1>Editing opportunity</h1>
+
+<% form_for(@opportunity) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :impact %><br />
+    <%= f.text_field :impact %>
+  </p>
+  <p>
+    <%= f.label :approach %><br />
+    <%= f.text_field :approach %>
+  </p>
+  <p>
+    <%= f.label :commitment %><br />
+    <%= f.text_field :commitment %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @opportunity %> |
+<%= link_to 'Back', opportunities_path %>

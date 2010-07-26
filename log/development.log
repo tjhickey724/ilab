@@ -395,3 +395,1046 @@ Processing UsersController#show (for 127.0.0.1 at 2010-07-26 11:06:55) [GET]
   [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:06:55', "perishable_token" = 'r0ux6eLO6eB8l1eH-BlH', "last_request_at" = '2010-07-26 15:06:55' WHERE "id" = 1[0m
 Rendering users/show
 Completed in 22ms (View: 1, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 11:43:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b840309e485820d479bc4bea0695b4e2586e40e48c3f9b233de9205de766fc8add0adbd6f16f22bb7811f65c0cbb3a1e7142a606d9a3c8c22b1be8b69c02f1ef') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:43:53', "perishable_token" = 'CCpoU72EkPzffLPUxAve', "last_request_at" = '2010-07-26 15:43:53' WHERE "id" = 1[0m
+Redirected to http://localhost:3001/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 57ms (DB: 1) | 302 Found [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-26 11:43:53) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b840309e485820d479bc4bea0695b4e2586e40e48c3f9b233de9205de766fc8add0adbd6f16f22bb7811f65c0cbb3a1e7142a606d9a3c8c22b1be8b69c02f1ef') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:43:54', "perishable_token" = 'zaoXW2z9sBpseIkEhXoh', "last_request_at" = '2010-07-26 15:43:54' WHERE "id" = 1[0m
+Rendering users/show
+Completed in 22ms (View: 1, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-26 11:48:21) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b840309e485820d479bc4bea0695b4e2586e40e48c3f9b233de9205de766fc8add0adbd6f16f22bb7811f65c0cbb3a1e7142a606d9a3c8c22b1be8b69c02f1ef') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:48:21', "perishable_token" = 'IvkeMYWvjHZwmT7Uj_Bi', "last_request_at" = '2010-07-26 15:48:21' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 132ms (View: 6, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 11:48:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-07-26 11:48:24) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b840309e485820d479bc4bea0695b4e2586e40e48c3f9b233de9205de766fc8add0adbd6f16f22bb7811f65c0cbb3a1e7142a606d9a3c8c22b1be8b69c02f1ef') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:48:24', "perishable_token" = '7vcIkOXXkKz_sjdgM_Rs', "last_request_at" = '2010-07-26 15:48:24' WHERE "id" = 1[0m
+Redirected to http://localhost:3001/
+Completed in 55ms (DB: 1) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 11:48:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 11:48:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 11:48:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 87ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 11:48:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-26 11:48:35) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"tjhickey"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'tjhickey') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "login_count" = 2, "updated_at" = '2010-07-26 15:48:35', "perishable_token" = 'snaRmHHpmWKC9X_-cdMU', "last_request_at" = '2010-07-26 15:48:35', "last_login_at" = '2010-07-26 15:06:38', "last_login_ip" = '127.0.0.1', "current_login_at" = '2010-07-26 15:48:35' WHERE "id" = 1[0m
+Redirected to http://localhost:3001/account
+Completed in 61ms (DB: 1) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-26 11:48:35) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:48:35', "perishable_token" = 'LmIGClb3HAi6MnrICB9X', "last_request_at" = '2010-07-26 15:48:35' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 22ms (View: 2, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 11:48:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 11:48:48) [GET]
+
+ActionController::RoutingError (No route matches "/opportunity" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 11:48:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: opportunities: SELECT * FROM "opportunities" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: opportunities: SELECT * FROM "opportunities" ):
+  app/controllers/opportunities_controller.rb:5:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (35.5ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100726141812)
+Migrating to CreateOpportunities (20100726153909)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "opportunities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" varchar(255), "impact" varchar(255), "approach" varchar(255), "commitment" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100726153909')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("opportunities")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 11:49:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:49:10', "perishable_token" = 'ntwY_CZ2BUJiYEKRJYR3', "last_request_at" = '2010-07-26 15:49:10' WHERE "id" = 1[0m
+Completed in 65ms (View: 60, DB: 1) | 200 OK [http://localhost/opportunities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 11:49:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 11:49:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+Rendering template within layouts/application
+Rendering opportunities/new
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:49:17', "perishable_token" = 'cwMAD4g7miI8-9dmHwGg', "last_request_at" = '2010-07-26 15:49:17' WHERE "id" = 1[0m
+Completed in 110ms (View: 30, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 11:49:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 11:53:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+Rendering template within layouts/application
+Rendering opportunities/new
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:53:30', "perishable_token" = '2l5U-KGKkH_ztSjjUXhr', "last_request_at" = '2010-07-26 15:53:30' WHERE "id" = 1[0m
+Completed in 74ms (View: 68, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 11:53:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-26 11:54:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, edit, new, show, and update):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 11:54:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '9') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 20ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 11:54:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-26 11:54:22) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"1", "password"=>"[FILTERED]", "login"=>"tjhickey"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '9') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'tjhickey') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "login_count" = 3, "updated_at" = '2010-07-26 15:54:22', "perishable_token" = 'jZRYBnFdldpsUSDkp_Ij', "last_request_at" = '2010-07-26 15:54:22', "last_login_at" = '2010-07-26 15:48:35', "current_login_at" = '2010-07-26 15:54:22' WHERE "id" = 1[0m
+Redirected to http://localhost:3001/account
+Completed in 30ms (DB: 1) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-26 11:54:22) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:54:22', "perishable_token" = 'oa_smrVuh6NVMGOTVhkC', "last_request_at" = '2010-07-26 15:54:22' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 23ms (View: 3, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 11:54:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 11:59:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+Rendering template within layouts/application
+Rendering opportunities/new
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:59:46', "perishable_token" = 'Y3Bm3koGjt4PHZFnP7Xd', "last_request_at" = '2010-07-26 15:59:46' WHERE "id" = 1[0m
+Completed in 75ms (View: 69, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 11:59:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpportunitiesController#create (for 127.0.0.1 at 2010-07-26 12:16:06) [POST]
+  Parameters: {"opportunity"=>{"commitment"=>"I am willing to put in up to one morning or afternoon per week to this project for up to one semester.  Afterwards, I am willing to participate in a developers group that helps maintain the site.", "approach"=>"One approach would be to develop a website that allows departments to easily enter and update their three year academic plans (or maybe four year?) and which allows students to easily enter their four year academic plans. Both students and faculty would be able to change their plans, but any such changes would generate automatic notifications to help students and departments better handle such changes.\r\n\r\nOnce this material is put online (in a voluntary model), a great deal more collaboration can be enabled.  For example, students can choose to share the list of courses they have taken and are planning to take. They can also create and share named clusters of courses which cover an intellectual topic.\r\n\r\nAlso, new students could peruse schedules of other students who have pursued similar academic plans (e.g. a Cosi and Music double major) to help them plan their four years in college.   \r\n", "title"=>"Collaborative Academic Planning", "user_id"=>"1", "impact"=>"Implementing a collaborative academic planning solution would have a substantial impact on Brandeis, and if adopted at other Universities, world-wide. Some of the benefits are\r\n* students would be able to indicate their interest in courses that are only taught once every 3-4 years and faculty would be able to use that data to argue for the resources needed to mount that courses (e.g. adjunct faculty, bigger room)\r\n* faculty would be able to anticipate staffing problems years in advance and find ways to fill those staffing problems\r\n* students could be contacted automatically whenever the department makes a decision to change a future course offering. This can help them better plan their undergraduate careers. For example, they may choose to take a course earlier if a decision is made to move from a every-two-years to an every-three-years schedule\r\n* advising would be much easier as students could see schedule for the current year as well as the proposed schedule for the next three years\r\n* students could lobby for a course to be offered more frequently (or have a less popular course offered less frequently in place of a more popular course) \r\n", "description"=>"Academic planning is often completed on a just-in-time basis. Departments decide in December the courses they will offer the following academic year, students look at the bulletin to try to plan the courses they will take over their four years in college but they register for courses just a few months before the semester starts. Administrators determine which classrooms to assign to which courses, and which departments need additional adjunct professors based on estimates of what the next semester's enrollments are going to be.\r\n\r\nThe academy would run more efficiently if there was a way for students, faculty, and staff to collaboratively plan the courses that will be offered, taken, and scheduled for 3-4 years in advance.\r\n\r\n"}, "commit"=>"Create", "action"=>"create", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Create (0.4ms)[0m   [0;1mINSERT INTO "opportunities" ("approach", "commitment", "created_at", "title", "updated_at", "user_id", "description", "impact") VALUES('One approach would be to develop a website that allows departments to easily enter and update their three year academic plans (or maybe four year?) and which allows students to easily enter their four year academic plans. Both students and faculty would be able to change their plans, but any such changes would generate automatic notifications to help students and departments better handle such changes.
+
+Once this material is put online (in a voluntary model), a great deal more collaboration can be enabled. For example, students can choose to share the list of courses they have taken and are planning to take. They can also create and share named clusters of courses which cover an intellectual topic.
+
+Also, new students could peruse schedules of other students who have pursued similar academic plans (e.g. a Cosi and Music double major) to help them plan their four years in college. 
+', 'I am willing to put in up to one morning or afternoon per week to this project for up to one semester. Afterwards, I am willing to participate in a developers group that helps maintain the site.', '2010-07-26 16:16:06', 'Collaborative Academic Planning', '2010-07-26 16:16:06', 1, 'Academic planning is often completed on a just-in-time basis. Departments decide in December the courses they will offer the following academic year, students look at the bulletin to try to plan the courses they will take over their four years in college but they register for courses just a few months before the semester starts. Administrators determine which classrooms to assign to which courses, and which departments need additional adjunct professors based on estimates of what the next semester''s enrollments are going to be.
+
+The academy would run more efficiently if there was a way for students, faculty, and staff to collaboratively plan the courses that will be offered, taken, and scheduled for 3-4 years in advance.
+
+', 'Implementing a collaborative academic planning solution would have a substantial impact on Brandeis, and if adopted at other Universities, world-wide. Some of the benefits are
+* students would be able to indicate their interest in courses that are only taught once every 3-4 years and faculty would be able to use that data to argue for the resources needed to mount that courses (e.g. adjunct faculty, bigger room)
+* faculty would be able to anticipate staffing problems years in advance and find ways to fill those staffing problems
+* students could be contacted automatically whenever the department makes a decision to change a future course offering. This can help them better plan their undergraduate careers. For example, they may choose to take a course earlier if a decision is made to move from a every-two-years to an every-three-years schedule
+* advising would be much easier as students could see schedule for the current year as well as the proposed schedule for the next three years
+* students could lobby for a course to be offered more frequently (or have a less popular course offered less frequently in place of a more popular course) 
+')[0m
+Redirected to http://localhost:3001/opportunities/1
+Completed in 96ms (DB: 0) | 302 Found [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#show (for 127.0.0.1 at 2010-07-26 12:16:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.2ms)[0m   [0mSELECT * FROM "opportunities" WHERE ("opportunities"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering opportunities/show
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 16:16:06', "perishable_token" = 'Z708WDFIvh9_FYpbakfx', "last_request_at" = '2010-07-26 16:16:06' WHERE "id" = 1[0m
+Completed in 129ms (View: 122, DB: 1) | 200 OK [http://localhost/opportunities/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 12:16:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:16:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.5ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-26 16:16:13', "perishable_token" = 'sLdch0z7yP8jyzhnxFxO', "last_request_at" = '2010-07-26 16:16:13' WHERE "id" = 1[0m
+Completed in 71ms (View: 66, DB: 1) | 200 OK [http://localhost/opportunities/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 12:16:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:20:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 16:20:38', "perishable_token" = 'd0hoRT-DcTtsWmJmKqCd', "last_request_at" = '2010-07-26 16:20:38' WHERE "id" = 1[0m
+Completed in 143ms (View: 138, DB: 1) | 200 OK [http://localhost/opportunities/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 12:20:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:21:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.5ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-26 16:21:57', "perishable_token" = 'HvC3rJ1wUO_cWH5cpZrR', "last_request_at" = '2010-07-26 16:21:57' WHERE "id" = 1[0m
+Completed in 72ms (View: 67, DB: 1) | 200 OK [http://localhost/opportunities/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 12:21:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 12:22:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:22:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 16:22:30', "perishable_token" = 'i79oAj4dz3Do4gDJt5e2', "last_request_at" = '2010-07-26 16:22:30' WHERE "id" = 1[0m
+Completed in 140ms (View: 135, DB: 1) | 200 OK [http://localhost/opportunities/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 12:22:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:22:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.5ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-26 16:22:58', "perishable_token" = 'wVrpGC9GQBljTTPOk_6v', "last_request_at" = '2010-07-26 16:22:58' WHERE "id" = 1[0m
+Completed in 72ms (View: 67, DB: 1) | 200 OK [http://localhost/opportunities/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:23:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 16:23:33', "perishable_token" = '76ecD_Ys4aV9jrY_-l8B', "last_request_at" = '2010-07-26 16:23:33' WHERE "id" = 1[0m
+Completed in 140ms (View: 135, DB: 1) | 200 OK [http://localhost/opportunities/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:25:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.5ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-26 16:25:31', "perishable_token" = 'JpecEDdufNenyvwt_iWA', "last_request_at" = '2010-07-26 16:25:31' WHERE "id" = 1[0m
+Completed in 74ms (View: 69, DB: 1) | 200 OK [http://localhost/opportunities/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:26:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 16:26:09', "perishable_token" = 'TJEszdPaQundQXRP4NIt', "last_request_at" = '2010-07-26 16:26:09' WHERE "id" = 1[0m
+Completed in 74ms (View: 69, DB: 1) | 200 OK [http://localhost/opportunities/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:27:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.5ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+
+ActionView::TemplateError (undefined method `date' for Mon Jul 26 16:16:06 UTC 2010:Time) on line #5 of app/views/opportunities/index.html.erb:
+2: <ul> 
+3: <% @opportunities.each do |opportunity| %>
+4: <li>
+5: 	<a href="#op<%=h opportunity.id %>"> <%=h opportunity.title %> = <%=h opportunity.created_at.date %></a>
+6: </li>
+7: <% end %>
+8: </ul>
+
+    app/views/opportunities/index.html.erb:5
+    app/views/opportunities/index.html.erb:3:in `each'
+    app/views/opportunities/index.html.erb:3
+    app/controllers/opportunities_controller.rb:7:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (39.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:27:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 16:27:19', "perishable_token" = 'TY2RHcYP85kb6bx_gdCT', "last_request_at" = '2010-07-26 16:27:19' WHERE "id" = 1[0m
+Completed in 150ms (View: 145, DB: 1) | 200 OK [http://localhost/opportunities/]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 12:27:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+Rendering template within layouts/application
+Rendering opportunities/new
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 16:27:36', "perishable_token" = 'uIkISVBKX-cFpZs-GPwy', "last_request_at" = '2010-07-26 16:27:36' WHERE "id" = 1[0m
+Completed in 72ms (View: 67, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 12:36:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+Rendering template within layouts/application
+Rendering opportunities/new
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 16:36:50', "perishable_token" = 'hCq6nF-BabGFD06aiclj', "last_request_at" = '2010-07-26 16:36:50' WHERE "id" = 1[0m
+Completed in 72ms (View: 67, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 12:44:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+Rendering template within layouts/application
+Rendering opportunities/new
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 16:44:52', "perishable_token" = 'UiNNAQU0b7DUyYsDPZ6u', "last_request_at" = '2010-07-26 16:44:52' WHERE "id" = 1[0m
+Completed in 75ms (View: 69, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 12:46:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+Rendering template within layouts/application
+Rendering opportunities/new
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 16:46:11', "perishable_token" = 'k1GBX3mN2X22bdEyOOLg', "last_request_at" = '2010-07-26 16:46:11' WHERE "id" = 1[0m
+Completed in 77ms (View: 69, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 12:46:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+Rendering template within layouts/application
+Rendering opportunities/new
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 16:46:26', "perishable_token" = 'oU-kKDawfFAhlahi4hDF', "last_request_at" = '2010-07-26 16:46:26' WHERE "id" = 1[0m
+Completed in 154ms (View: 148, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-07-26 12:49:30) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 16:49:30', "perishable_token" = 'mzeAAXwl1G0sFnzysyEt', "last_request_at" = '2010-07-26 16:49:30' WHERE "id" = 1[0m
+Redirected to http://localhost:3001/user_session/new
+Completed in 62ms (DB: 1) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 12:49:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 50ms (View: 38, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 12:49:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+Redirected to http://localhost:3001/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/opportunities/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 12:49:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 17ms (View: 4, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-26 12:49:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, edit, new, show, and update):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-26 12:50:03) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+Redirected to http://localhost:3001/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/users/show/1]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 12:50:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 20ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:51:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.6ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+Completed in 178ms (View: 173, DB: 1) | 200 OK [http://localhost/opportunities/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:52:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+Redirected to http://localhost:3001/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/opportunities/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 12:52:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 4, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 12:53:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 4, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:54:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+Completed in 105ms (View: 101, DB: 1) | 200 OK [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 12:54:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+Redirected to http://localhost:3001/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/opportunities/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 12:54:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-26 12:55:03) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"tjhickey"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'tjhickey') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "login_count" = 4, "updated_at" = '2010-07-26 16:55:03', "perishable_token" = 'zQRCVXMzhLU80Vian9r5', "last_request_at" = '2010-07-26 16:55:03', "last_login_at" = '2010-07-26 15:54:22', "current_login_at" = '2010-07-26 16:55:03' WHERE "id" = 1[0m
+Redirected to http://localhost:3001/opportunities/new
+Completed in 69ms (DB: 1) | 302 Found [http://localhost/user_session]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 12:55:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 16:55:03', "perishable_token" = '2ZkEwjAc0MoZhT2zgf1H', "last_request_at" = '2010-07-26 16:55:03' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering opportunities/new
+Completed in 142ms (View: 9, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-07-26 12:55:12) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 16:55:12', "perishable_token" = 'phKwfjKjRuN-Trx8xmhF', "last_request_at" = '2010-07-26 16:55:12' WHERE "id" = 1[0m
+Redirected to http://localhost:3001/user_session/new
+Completed in 22ms (DB: 1) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 12:55:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 4, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:55:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (1.6ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+Completed in 24ms (View: 18, DB: 2) | 200 OK [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:57:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+Completed in 38ms (View: 34, DB: 1) | 200 OK [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:58:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.5ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:58:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:59:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.5ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:59:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+Completed in 26ms (View: 21, DB: 1) | 200 OK [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 12:59:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.5ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 13:00:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+Completed in 36ms (View: 31, DB: 1) | 200 OK [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 13:01:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.5ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+Completed in 25ms (View: 19, DB: 0) | 200 OK [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 13:01:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+Redirected to http://localhost:3001/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/opportunities/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 13:01:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 102ms (View: 13, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-26 13:02:02) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"tjhickey"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'tjhickey') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "login_count" = 5, "updated_at" = '2010-07-26 17:02:02', "perishable_token" = 'FHYKOgeCf7f3dOMQ1UJy', "last_request_at" = '2010-07-26 17:02:02', "last_login_at" = '2010-07-26 16:55:03', "current_login_at" = '2010-07-26 17:02:02' WHERE "id" = 1[0m
+Redirected to http://localhost:3001/opportunities/new
+Completed in 62ms (DB: 1) | 302 Found [http://localhost/user_session]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 13:02:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (4.2ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-26 17:02:02', "perishable_token" = 'b_QkRXO5hjtTCxvrVHRJ', "last_request_at" = '2010-07-26 17:02:02' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering opportunities/new
+Completed in 41ms (View: 10, DB: 5) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing OpportunitiesController#create (for 127.0.0.1 at 2010-07-26 13:07:03) [POST]
+  Parameters: {"opportunity"=>{"commitment"=>"I would be willing to contribute a few hours/week to such a project and to act as a technical consultant when programming problems arise.", "approach"=>"One approach would be to develop a google maps mashup with custom-css for the mobile, another would be to develop native apps using the google maps API", "title"=>"Interactive Mobile Campus Map", "user_id"=>"1", "impact"=>"This would make Brandeis a more visitor-friendly destination and could help make a more strongly positive first impression.", "description"=>"The campus can be a confusing place for visitors or newly arrived students. There is a campus map on the website, but it does not provide walking directions, satellite views, or other common interactive map features and it is not customized for use on a mobile device. \r\n\r\nThe campus needs a web 2.0 based campus map that would run on laptops and mobile devices."}, "commit"=>"Create", "action"=>"create", "controller"=>"opportunities"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-26 17:07:03', "perishable_token" = 'm_QVj3sg-PRRkSaR82us', "last_request_at" = '2010-07-26 17:07:03' WHERE "id" = 1[0m
+  [4;35;1mOpportunity Create (0.4ms)[0m   [0mINSERT INTO "opportunities" ("approach", "commitment", "created_at", "title", "updated_at", "user_id", "description", "impact") VALUES('One approach would be to develop a google maps mashup with custom-css for the mobile, another would be to develop native apps using the google maps API', 'I would be willing to contribute a few hours/week to such a project and to act as a technical consultant when programming problems arise.', '2010-07-26 17:07:03', 'Interactive Mobile Campus Map', '2010-07-26 17:07:03', 1, 'The campus can be a confusing place for visitors or newly arrived students. There is a campus map on the website, but it does not provide walking directions, satellite views, or other common interactive map features and it is not customized for use on a mobile device. 
+
+The campus needs a web 2.0 based campus map that would run on laptops and mobile devices.', 'This would make Brandeis a more visitor-friendly destination and could help make a more strongly positive first impression.')[0m
+Redirected to http://localhost:3001/opportunities/2
+Completed in 57ms (DB: 1) | 302 Found [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#show (for 127.0.0.1 at 2010-07-26 13:07:03) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.2ms)[0m   [0;1mSELECT * FROM "opportunities" WHERE ("opportunities"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering opportunities/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (3.8ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-26 17:07:03', "perishable_token" = '2bKo0zw5zi9b3GRNl46V', "last_request_at" = '2010-07-26 17:07:03' WHERE "id" = 1[0m
+Completed in 38ms (View: 28, DB: 4) | 200 OK [http://localhost/opportunities/2]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 13:07:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.6ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 17:07:09', "perishable_token" = '-_K-QAGF8teFLQnpO6Sv', "last_request_at" = '2010-07-26 17:07:09' WHERE "id" = 1[0m
+Completed in 74ms (View: 67, DB: 1) | 200 OK [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 13:09:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 17:09:10', "perishable_token" = '3C0csqUj-E06RdnO7gsM', "last_request_at" = '2010-07-26 17:09:10' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering opportunities/new
+Completed in 105ms (View: 12, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 13:10:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 17:10:24', "perishable_token" = '0oY-3c6tn58EFfNUO8vO', "last_request_at" = '2010-07-26 17:10:24' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering opportunities/new
+ERROR: compiling _run_erb_app47views47opportunities47new46html46erb RAISED compile error
+/Users/tim/Documents/idealabsite/ilab/app/views/opportunities/new.html.erb:74: syntax error, unexpected '<'
+...en_field :user_id, :value => <%=h @current_user.id ).to_s); ...
+                              ^
+/Users/tim/Documents/idealabsite/ilab/app/views/opportunities/new.html.erb:83: syntax error, unexpected tIDENTIFIER, expecting ')'
+Function body:           def _run_erb_app47views47opportunities47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Idea Lab Project Proposals</h1>\n<p>\n\tWelcome "
+
+; @output_buffer.concat((h @current_user.login ).to_s); @output_buffer.concat "\n\t</p>\n\t\n<p>\nPlease use the form below to describe an opportunity in which the Idea Lab at Brandeis\ncan have an impact on the community while also allowing the students and faculty the potential\nto explore cutting edge internet and mobile technology.\n</p>\n\n<p>\n\tYour responses on this form will be made public and registered users will be allowed to vote on your project\n\tand to explain their vote with a comment. Registered users will also be allowed to volunteer their time or other\n\tresources to this project should it go ahead. The IdeaLab team will select new projects to take on by reviewing the\n\tsubmitted projects and comments and matching the skills and interests of each particular development team with the\n\tmost appropriate project. Most projects should be designed to be completed in one semester. Larger projects can be\n\tdecomposed into smaller projects to make this happen.\n</p>\n\n<p>\n\tThe goal of the IdeaLab is to provide students with a exciting opportunity to solve problems that have a substantial\n\timpact on the community by applying their academic skills and knowledge and by learning how to work in a small, agile\n\tdevelopment team using the latest web and mobile technology.  The projects will be selected to best advance the\n\teducational mission of deepening our students understanding of Computer Science while also having maximum long-term\n\timpact on the community and, ideally, the world.\n\t</p>\n\n<p>Please see <a href=\"index.html\">the opportunities page</a> for examples of previously submitted IdeaLab opportunities.\n\t</p>\n\t<hr/>\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;  form_for(@opportunity) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n  \t<b>"
+
+
+; @output_buffer.concat(( f.label :title ).to_s); @output_buffer.concat "</b>\n  \tStart off with a short title for your project. It should be suggestive.\n    <br/>\n    "
+
+
+; @output_buffer.concat(( f.text_field :title ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n  \t<b>"
+
+
+; @output_buffer.concat(( f.label :description ).to_s); @output_buffer.concat "</b>\n  \tNext describe the problem that is to be solved by the IdeaLab. Try not to describe your proposed solution,\n\tbut to explain how we can tell that the problem has been solved. What are the metrics that we should use to\n\tmeasure the degree of success. Quantitative and qualitative measures are both fine.\n    <br />\n    "
+
+
+
+
+; @output_buffer.concat(( f.text_area :description, :size => "60x10" ).to_s); @output_buffer.concat "\n  </p>\n  <p><b>\n    "
+
+
+; @output_buffer.concat(( f.label :impact ).to_s); @output_buffer.concat "</b>\n\tDescribe the impact a successful solution to this problem will have on the local community, and if applicable, to the global community.\n\t\n\t<br />\n    "
+
+
+
+; @output_buffer.concat(( f.text_area :impact, :size => "60x10" ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    <b>"
+
+
+; @output_buffer.concat(( f.label :approach ).to_s); @output_buffer.concat "</b>\n\tDescribe the kind of approach you think would solve this problem, including the types of technology (interactive websites, \n\tmobile applications, etc.)\n\t<br />\n    "
+
+
+
+; @output_buffer.concat(( f.text_area :approach, :size => "60x10" ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    <b>"
+
+
+; @output_buffer.concat(( f.label :commitment ).to_s); @output_buffer.concat "</b>\n\tWhat kind of commitment are you willing to make to see this problem solved. Please be as specific as possible, e.g\n\thow many hours/week (or month) are you willing to work with the IdeaLab team on this project? If you have access to a budget\n\tline, are you willing to hire one or more students or staff to work on this project? If you are a manager are you willing\n\tto assign one of your staff to work on this project some number of hours per week?\n\t<br />\n    "
+
+
+
+
+
+; @output_buffer.concat(( f.text_area :commitment, :size => "60x10" ).to_s); @output_buffer.concat "\n  </p>\n\n    "
+
+
+; @output_buffer.concat(( f.hidden_field :user_id, :value => <%=h @current_user.id ).to_s); @output_buffer.concat " %>\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', opportunities_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/tim/Documents/idealabsite/ilab/app/views/opportunities/new.html.erb:84:in `compile!'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/tim/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/tim/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/tim/Documents/idealabsite/ilab/app/controllers/opportunities_controller.rb:32:in `new'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/tim/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/tim/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/tim/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/tim/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/tim/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/tim/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/tim/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/tim/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/tim/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/tim/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/tim/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/tim/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/tim/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/tim/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/tim/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/tim/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/tim/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/tim/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/tim/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/tim/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/tim/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/tim/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/tim/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/tim/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+/Users/tim/Documents/idealabsite/ilab/app/views/opportunities/new.html.erb:74: syntax error, unexpected '<'
+...en_field :user_id, :value => <%=h @current_user.id ).to_s); ...
+                              ^
+/Users/tim/Documents/idealabsite/ilab/app/views/opportunities/new.html.erb:83: syntax error, unexpected tIDENTIFIER, expecting ')') on line #74 of app/views/opportunities/new.html.erb:
+71:     <%= f.text_area :commitment, :size => "60x10" %>
+72:   </p>
+73: 
+74:     <%= f.hidden_field :user_id, :value => <%=h @current_user.id %> %>
+75: 
+76:   <p>
+77:     <%= f.submit 'Create' %>
+
+    app/views/opportunities/new.html.erb:84:in `compile!'
+    app/controllers/opportunities_controller.rb:32:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (38.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 13:11:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 17:11:03', "perishable_token" = 'W3x3k7ZUhH596H0UE6_7', "last_request_at" = '2010-07-26 17:11:03' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering opportunities/new
+Completed in 167ms (View: 11, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing OpportunitiesController#create (for 127.0.0.1 at 2010-07-26 13:16:50) [POST]
+  Parameters: {"opportunity"=>{"commitment"=>"I'm willing to serve as a technical consultant by email and skype for one or two semesters.", "approach"=>"A website to create the contract and a mobile app to view it (along with other important roommate info, e.g. phone numbers ...)\r\n", "title"=>"Roommate contracts", "user_id"=>"1", "impact"=>"If effectively implemented and deployed it could improve the quality of life for Brandeis students, and possibly students in other Universities if the approach becomes widespread.", "description"=>"Roommates in college dorms often have problems because of misunderstandings of their shared responsibilities and commitments. It would be great if students had a resource where they could create a set of rules they will agree to follow as roommates. This is a kind of contract that they all agree to so as to make clear what if often otherwise just assumed.  Sample contract clauses could also help students anticipate the kinds of problems that might arise before they become serious."}, "commit"=>"Create", "action"=>"create", "controller"=>"opportunities"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 17:16:50', "perishable_token" = 'N-ih5UvXXhPkcLiXmGf9', "last_request_at" = '2010-07-26 17:16:50' WHERE "id" = 1[0m
+  [4;36;1mOpportunity Create (0.4ms)[0m   [0;1mINSERT INTO "opportunities" ("approach", "commitment", "created_at", "title", "updated_at", "user_id", "description", "impact") VALUES('A website to create the contract and a mobile app to view it (along with other important roommate info, e.g. phone numbers ...)
+', 'I''m willing to serve as a technical consultant by email and skype for one or two semesters.', '2010-07-26 17:16:50', 'Roommate contracts', '2010-07-26 17:16:50', 1, 'Roommates in college dorms often have problems because of misunderstandings of their shared responsibilities and commitments. It would be great if students had a resource where they could create a set of rules they will agree to follow as roommates. This is a kind of contract that they all agree to so as to make clear what if often otherwise just assumed. Sample contract clauses could also help students anticipate the kinds of problems that might arise before they become serious.', 'If effectively implemented and deployed it could improve the quality of life for Brandeis students, and possibly students in other Universities if the approach becomes widespread.')[0m
+Redirected to http://localhost:3001/opportunities/3
+Completed in 400ms (DB: 1) | 302 Found [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#show (for 127.0.0.1 at 2010-07-26 13:16:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.2ms)[0m   [0mSELECT * FROM "opportunities" WHERE ("opportunities"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering opportunities/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 17:16:50', "perishable_token" = 'uvDYr_oK7azR3mN3_IXe', "last_request_at" = '2010-07-26 17:16:50' WHERE "id" = 1[0m
+Completed in 97ms (View: 91, DB: 1) | 200 OK [http://localhost/opportunities/3]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 13:16:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.7ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-26 17:16:54', "perishable_token" = 'ZEiJhJ1e0znoDZXG4cAn', "last_request_at" = '2010-07-26 17:16:54' WHERE "id" = 1[0m
+Completed in 76ms (View: 70, DB: 1) | 200 OK [http://localhost/opportunities]
