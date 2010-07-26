@@ -43,3 +43,355 @@ ActionController::RoutingError (No route matches "/cap.png" with {:method=>:get}
   -e:2
 
 Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 10:50:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `t' for User(Table doesn't exist):Class):
+  app/models/user.rb:6
+  authlogic (2.1.5) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.5) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.5) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.5) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.5) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.5) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.5) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.5) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.5) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:12:in `current_user_session'
+  app/controllers/application_controller.rb:17:in `current_user'
+  app/controllers/application_controller.rb:31:in `require_no_user'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (99.0ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100726141812)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100726141812')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 10:51:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `t' for User(id: integer, created_at: datetime, updated_at: datetime):Class):
+  app/models/user.rb:6
+  authlogic (2.1.5) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.5) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.5) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.5) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.5) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.5) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.5) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.5) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.5) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:12:in `current_user_session'
+  app/controllers/application_controller.rb:17:in `current_user'
+  app/controllers/application_controller.rb:31:in `require_no_user'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (48.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 10:52:09) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `t' for User(id: integer, created_at: datetime, updated_at: datetime):Class):
+  app/models/user.rb:6
+  authlogic (2.1.5) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.5) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.5) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.5) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.5) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.5) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.5) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.5) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.5) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:12:in `current_user_session'
+  app/controllers/application_controller.rb:17:in `current_user'
+  app/controllers/application_controller.rb:31:in `require_no_user'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (101.6ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100726141812)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100726141812)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (51.7ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100726141812'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100726141812)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100726141812')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 10:55:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering user_sessions/new
+Completed in 119ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 10:55:34) [GET]
+
+ActionController::RoutingError (No route matches "/register" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 11:02:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering user_sessions/new
+Completed in 24ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 11:02:51) [GET]
+
+ActionController::RoutingError (No route matches "/register" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100726141812)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 11:03:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering user_sessions/new
+Completed in 27ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-26 11:03:35) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"tim"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'tim') LIMIT 1[0m
+Rendering user_sessions/new
+Completed in 179ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 11:04:12) [GET]
+
+ActionController::RoutingError (No route matches "/user/new" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-26 11:04:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering users/new
+Rendered users/_form (3.1ms)
+Completed in 89ms (View: 76, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-26 11:04:32) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"tjhickey"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'tjhickey') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'cdf47b6b6fdd29a3000885c633fce75e04fe7cf117b2c055f25828fecd0561a0c9b89354f96c9d1a31edd20665461ea99ac5764005c6a2eeaac94dd8ac6c7033') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'S2eOHp9nK1tAWweu46Au') LIMIT 1[0m
+Rendering users/new
+Rendered users/_form (1.8ms)
+Completed in 104ms (View: 6, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-26 11:05:01) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"tjhickey@brandeis.edu"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'tjhickey@brandeis.edu') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'a60f91c03e3b51be43e3084e6f966db40c7249f9747540068f188c3765a6309db7f192887de02fdf14a9b02defa8ba5f65a8bdd8fb185d750062b2e91b0503f1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'gK1h9ps21PZSQTF2ys1R') LIMIT 1[0m
+Rendering users/new
+Rendered users/_form (1.6ms)
+Completed in 26ms (View: 6, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 11:06:26) [GET]
+
+ActionController::RoutingError (No route matches "/user/new" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-26 11:06:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering users/new
+Rendered users/_form (2.8ms)
+Completed in 93ms (View: 79, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-26 11:06:38) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"tjhickey", "email"=>"tjhickey@brandeis.edu"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'tjhickey@brandeis.edu') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'tjhickey') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b840309e485820d479bc4bea0695b4e2586e40e48c3f9b233de9205de766fc8add0adbd6f16f22bb7811f65c0cbb3a1e7142a606d9a3c8c22b1be8b69c02f1ef') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'pMd7xipTXD4K0Xn-wDxG') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "login", "last_login_at", "email") VALUES('pMd7xipTXD4K0Xn-wDxG', '2010-07-26 15:06:38', '2010-07-26 15:06:38', '309c9ca6023075448b35cb0b03a8d21866ffe337b037ac675186577f7bc43e3d93b41a5672c5578e4a297663c7f02c21848e2950d1cbe028c29e75dcdae0dd3b', 'ODgI5CkBLVWBaOMEkQud', '2010-07-26 15:06:38', 0, '127.0.0.1', 'xzrOLMkYoylSA56K_Wt8', '2010-07-26 15:06:38', 'b840309e485820d479bc4bea0695b4e2586e40e48c3f9b233de9205de766fc8add0adbd6f16f22bb7811f65c0cbb3a1e7142a606d9a3c8c22b1be8b69c02f1ef', 1, NULL, 'tjhickey', NULL, 'tjhickey@brandeis.edu')[0m
+Redirected to http://localhost:3001/account
+Completed in 84ms (DB: 1) | 302 Found [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-26 11:06:39) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b840309e485820d479bc4bea0695b4e2586e40e48c3f9b233de9205de766fc8add0adbd6f16f22bb7811f65c0cbb3a1e7142a606d9a3c8c22b1be8b69c02f1ef') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:06:39', "perishable_token" = 'edfnseIVWjqTktxbtFQq', "last_request_at" = '2010-07-26 15:06:39' WHERE "id" = 1[0m
+Rendering users/show
+Completed in 25ms (View: 4, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-07-26 11:06:43) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b840309e485820d479bc4bea0695b4e2586e40e48c3f9b233de9205de766fc8add0adbd6f16f22bb7811f65c0cbb3a1e7142a606d9a3c8c22b1be8b69c02f1ef') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:06:43', "perishable_token" = '8NKwUAaTxVt_sUqRwRJO', "last_request_at" = '2010-07-26 15:06:43' WHERE "id" = 1[0m
+Rendering users/edit
+Rendered users/_form (71.3ms)
+Completed in 136ms (View: 78, DB: 1) | 200 OK [http://localhost/account/edit]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-26 11:06:46) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b840309e485820d479bc4bea0695b4e2586e40e48c3f9b233de9205de766fc8add0adbd6f16f22bb7811f65c0cbb3a1e7142a606d9a3c8c22b1be8b69c02f1ef') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:06:46', "perishable_token" = 'JO7A4dzOdvcZULx7uqK-', "last_request_at" = '2010-07-26 15:06:46' WHERE "id" = 1[0m
+Rendering users/show
+Completed in 61ms (View: 1, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 11:06:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b840309e485820d479bc4bea0695b4e2586e40e48c3f9b233de9205de766fc8add0adbd6f16f22bb7811f65c0cbb3a1e7142a606d9a3c8c22b1be8b69c02f1ef') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:06:55', "perishable_token" = 'qE23DLlDY_e6ESjMHjaR', "last_request_at" = '2010-07-26 15:06:55' WHERE "id" = 1[0m
+Redirected to http://localhost:3001/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 58ms (DB: 1) | 302 Found [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-26 11:06:55) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b840309e485820d479bc4bea0695b4e2586e40e48c3f9b233de9205de766fc8add0adbd6f16f22bb7811f65c0cbb3a1e7142a606d9a3c8c22b1be8b69c02f1ef') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 15:06:55', "perishable_token" = 'r0ux6eLO6eB8l1eH-BlH', "last_request_at" = '2010-07-26 15:06:55' WHERE "id" = 1[0m
+Rendering users/show
+Completed in 22ms (View: 1, DB: 1) | 200 OK [http://localhost/account]
