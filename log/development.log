@@ -1564,3 +1564,874 @@ Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-26 13:40:46) [GE
 Rendering template within layouts/application
 Rendering user_sessions/new
 Completed in 15ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOpportunities (20100726153909)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mDROP TABLE "opportunities"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100726153909'[0m
+Migrating to CreateUsers (20100726141812)
+  [4;35;1mSQL (0.6ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100726141812'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100726141812)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100726141812')[0m
+Migrating to CreateOpportunities (20100726153909)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "opportunities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "impact" text, "approach" text, "commitment" text, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100726153909')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("opportunities")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 14:01:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.3ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 91ms (View: 86, DB: 1) | 200 OK [http://localhost/opportunities]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-26 14:02:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.0ms)
+Completed in 21ms (View: 6, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-26 14:02:10) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"tjhickey", "email"=>"tjhickey@brandeis.edu"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'tjhickey@brandeis.edu') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'tjhickey') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'd13f7b63ce8bd6700b2d62f083215c08ead5f97f94ee9d9a666ff6254d81268f0e041a52a11a06c00512a19ca9734e096de8788aa7e4a985373c9c0e0f4897bf') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'cVz9JDspJemCN7bJNGRS') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "login", "last_login_at", "email") VALUES('cVz9JDspJemCN7bJNGRS', '2010-07-26 18:02:10', '2010-07-26 18:02:10', 'f0dd4739b5df9c7786bf1db0ddfb4a3870fdcadefe78ade206946a256b644a9d2d95478d70a7fee8cb55de212db8600dd85e3dc6044f021d448b2b8fe460a5de', '1JLWT120oOc4DzqrY1fp', '2010-07-26 18:02:10', 0, '127.0.0.1', 'pADDGpynUEWzvJkJOqRU', '2010-07-26 18:02:10', 'd13f7b63ce8bd6700b2d62f083215c08ead5f97f94ee9d9a666ff6254d81268f0e041a52a11a06c00512a19ca9734e096de8788aa7e4a985373c9c0e0f4897bf', 1, NULL, 'tjhickey', NULL, 'tjhickey@brandeis.edu')[0m
+Redirected to http://localhost:3001/account
+Completed in 30ms (DB: 1) | 302 Found [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-26 14:02:10) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'd13f7b63ce8bd6700b2d62f083215c08ead5f97f94ee9d9a666ff6254d81268f0e041a52a11a06c00512a19ca9734e096de8788aa7e4a985373c9c0e0f4897bf') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-26 18:02:10', "perishable_token" = 'CyPVMQ6p5XDdR3ZIM9fC', "last_request_at" = '2010-07-26 18:02:10' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 21ms (View: 2, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-26 14:02:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.4ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'd13f7b63ce8bd6700b2d62f083215c08ead5f97f94ee9d9a666ff6254d81268f0e041a52a11a06c00512a19ca9734e096de8788aa7e4a985373c9c0e0f4897bf') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-26 18:02:20', "perishable_token" = 'Z8e6CaUTck4yC0EbI8Vt', "last_request_at" = '2010-07-26 18:02:20' WHERE "id" = 1[0m
+Completed in 98ms (View: 20, DB: 1) | 200 OK [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-26 14:02:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'd13f7b63ce8bd6700b2d62f083215c08ead5f97f94ee9d9a666ff6254d81268f0e041a52a11a06c00512a19ca9734e096de8788aa7e4a985373c9c0e0f4897bf') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-26 18:02:22', "perishable_token" = 'fihBZJXVcWa7p0MFMtZK', "last_request_at" = '2010-07-26 18:02:22' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering opportunities/new
+Completed in 71ms (View: 7, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing OpportunitiesController#create (for 127.0.0.1 at 2010-07-26 14:02:56) [POST]
+  Parameters: {"opportunity"=>{"commitment"=>"", "approach"=>"", "title"=>"Collaborative Academic Planning", "user_id"=>"1", "impact"=>"Academic planning is often completed on a just-in-time basis. Departments decide in December the courses they will offer the following academic year, students look at the bulletin to try to plan the courses they will take over their four years in college but they register for courses just a few months before the semester starts. Administrators determine which classrooms to assign to which courses, and which departments need additional adjunct professors based on estimates of what the next semester's enrollments are going to be. The academy would run more efficiently if there was a way for students, faculty, and staff to collaboratively plan the courses that will be offered, taken, and scheduled for 3-4 years in advance.\r\n", "description"=>"Academic planning is often completed on a just-in-time basis. Departments decide in December the courses they will offer the following academic year, students look at the bulletin to try to plan the courses they will take over their four years in college but they register for courses just a few months before the semester starts. Administrators determine which classrooms to assign to which courses, and which departments need additional adjunct professors based on estimates of what the next semester's enrollments are going to be. The academy would run more efficiently if there was a way for students, faculty, and staff to collaboratively plan the courses that will be offered, taken, and scheduled for 3-4 years in advance.\r\n"}, "commit"=>"Create", "action"=>"create", "controller"=>"opportunities"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'd13f7b63ce8bd6700b2d62f083215c08ead5f97f94ee9d9a666ff6254d81268f0e041a52a11a06c00512a19ca9734e096de8788aa7e4a985373c9c0e0f4897bf') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-26 18:02:56', "perishable_token" = 'yihK5MePearg0PJ_haar', "last_request_at" = '2010-07-26 18:02:56' WHERE "id" = 1[0m
+  [4;35;1mOpportunity Create (0.4ms)[0m   [0mINSERT INTO "opportunities" ("approach", "commitment", "created_at", "title", "updated_at", "user_id", "description", "impact") VALUES('', '', '2010-07-26 18:02:56', 'Collaborative Academic Planning', '2010-07-26 18:02:56', 1, 'Academic planning is often completed on a just-in-time basis. Departments decide in December the courses they will offer the following academic year, students look at the bulletin to try to plan the courses they will take over their four years in college but they register for courses just a few months before the semester starts. Administrators determine which classrooms to assign to which courses, and which departments need additional adjunct professors based on estimates of what the next semester''s enrollments are going to be. The academy would run more efficiently if there was a way for students, faculty, and staff to collaboratively plan the courses that will be offered, taken, and scheduled for 3-4 years in advance.
+', 'Academic planning is often completed on a just-in-time basis. Departments decide in December the courses they will offer the following academic year, students look at the bulletin to try to plan the courses they will take over their four years in college but they register for courses just a few months before the semester starts. Administrators determine which classrooms to assign to which courses, and which departments need additional adjunct professors based on estimates of what the next semester''s enrollments are going to be. The academy would run more efficiently if there was a way for students, faculty, and staff to collaboratively plan the courses that will be offered, taken, and scheduled for 3-4 years in advance.
+')[0m
+Redirected to http://localhost:3001/opportunities/1
+Completed in 71ms (DB: 1) | 302 Found [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#show (for 127.0.0.1 at 2010-07-26 14:02:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.2ms)[0m   [0;1mSELECT * FROM "opportunities" WHERE ("opportunities"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering opportunities/show
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'd13f7b63ce8bd6700b2d62f083215c08ead5f97f94ee9d9a666ff6254d81268f0e041a52a11a06c00512a19ca9734e096de8788aa7e4a985373c9c0e0f4897bf') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-26 18:02:56', "perishable_token" = 'ddLiPbLLlqtTHDhl6l_R', "last_request_at" = '2010-07-26 18:02:56' WHERE "id" = 1[0m
+Completed in 109ms (View: 102, DB: 1) | 200 OK [http://localhost/opportunities/1]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOpportunities (20100726153909)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mDROP TABLE "opportunities"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100726153909'[0m
+Migrating to CreateUsers (20100726141812)
+  [4;35;1mSQL (0.7ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100726141812'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100726141812)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100726141812')[0m
+Migrating to CreateOpportunities (20100726153909)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "opportunities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "impact" text, "approach" text, "commitment" text, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100726153909')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("opportunities")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-30 12:30:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 66ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-30 12:30:52) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"tjhickey"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'tjhickey') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 181ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-30 12:31:11) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"tim"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'tim') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 86ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-30 12:31:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, edit, new, show, and update):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show to html (for 127.0.0.1 at 2010-07-30 12:31:29) [GET]
+  Parameters: {"format"=>"html", "action"=>"show", "id"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3001/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/users/index.html]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-30 12:31:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 17ms (View: 4, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-30 12:31:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.9ms)
+Completed in 99ms (View: 86, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-30 12:31:51) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"tjhickey724", "email"=>"tjhickey724@gmail.com"}}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'tjhickey724@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'tjhickey724') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'i1n8IEDe2PTHds_enriH') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Create (12.6ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "login", "last_login_at", "email") VALUES('i1n8IEDe2PTHds_enriH', '2010-07-30 16:31:51', '2010-07-30 16:31:51', '7fb7f7ef1378ea56cf23b5fc8db26b71ed1eed4be52257b4e66297e5665e73d1c7e34c9e86ca8edf2c6b13adaf388073d5d6b98e7c25c8f7189023368f1dd9de', '8u5J9AEJKktCPzEVjIZh', '2010-07-30 16:31:51', 0, '127.0.0.1', '64aZVp7IGwWQ-CUhX5zp', '2010-07-30 16:31:51', '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69', 1, NULL, 'tjhickey724', NULL, 'tjhickey724@gmail.com')[0m
+Redirected to http://localhost:3001/users/index.html
+Completed in 88ms (DB: 13) | 302 Found [http://localhost/account]
+
+
+Processing UsersController#show to html (for 127.0.0.1 at 2010-07-30 12:31:51) [GET]
+  Parameters: {"format"=>"html", "action"=>"show", "id"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 16:31:51', "perishable_token" = '2XQ2TrY02IXIzMfvPpRO', "last_request_at" = '2010-07-30 16:31:51' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 25ms (View: 5, DB: 1) | 200 OK [http://localhost/users/index.html]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-30 12:32:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, edit, new, show, and update):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 12:32:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 16:32:14', "perishable_token" = 'lBvSxjHE8pnbUB053VL5', "last_request_at" = '2010-07-30 16:32:14' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 96ms (View: 2, DB: 1) | 200 OK [http://localhost/users/show/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 12:32:20) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 16:32:20', "perishable_token" = 'xsv1Pjx0EvkKhI1KGeR9', "last_request_at" = '2010-07-30 16:32:20' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 25ms (View: 2, DB: 1) | 200 OK [http://localhost/users/show/2]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 12:32:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 16:32:32', "perishable_token" = 'Q6BqFL5VuEStJ8hhNTmK', "last_request_at" = '2010-07-30 16:32:32' WHERE "id" = 1[0m
+Completed in 63ms (View: 26, DB: 1) | 200 OK [http://localhost/opportunities]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-30 12:32:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 16:32:45', "perishable_token" = 'RpmE0L2kIMGfJo7RRmFM', "last_request_at" = '2010-07-30 16:32:45' WHERE "id" = 1[0m
+Redirected to http://localhost:3001/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 128ms (DB: 1) | 302 Found [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 12:32:45) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 16:32:45', "perishable_token" = '-EKWPwUnNRoTUl9z7YH-', "last_request_at" = '2010-07-30 16:32:45' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 23ms (View: 2, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 12:33:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.4ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 16:33:46', "perishable_token" = '3ml4lYvsw08v7p4DYxlR', "last_request_at" = '2010-07-30 16:33:46' WHERE "id" = 1[0m
+Completed in 76ms (View: 68, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-30 12:33:58) [GET]
+
+ActionController::RoutingError (No route matches "/new.html" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 12:34:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.4ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 16:34:55', "perishable_token" = 'nZVXD2Z7gLdYyw_LLSlT', "last_request_at" = '2010-07-30 16:34:55' WHERE "id" = 1[0m
+Completed in 131ms (View: 126, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-30 12:34:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 16:34:57', "perishable_token" = '_97sVBMRu1bzCwLUxEwe', "last_request_at" = '2010-07-30 16:34:57' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering opportunities/new
+Completed in 35ms (View: 11, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-30 12:39:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 16:39:00', "perishable_token" = '3Top5T7rICsVQ6D0lzGB', "last_request_at" = '2010-07-30 16:39:00' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering opportunities/new
+Completed in 73ms (View: 7, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-30 12:39:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 16:39:04', "perishable_token" = 'cWS66Vq6FyG5EQm3abp-', "last_request_at" = '2010-07-30 16:39:04' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering opportunities/new
+Completed in 131ms (View: 6, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-30 12:42:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 16:42:57', "perishable_token" = 'iQLzgD1MbTRtxCpuYEwh', "last_request_at" = '2010-07-30 16:42:57' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering opportunities/new
+Completed in 77ms (View: 12, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 12:43:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.5ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 16:43:21', "perishable_token" = 'bsHoCflJaYSrhbla-bD-', "last_request_at" = '2010-07-30 16:43:21' WHERE "id" = 1[0m
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/opportunities/]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-30 12:43:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 16:43:24', "perishable_token" = 'NmX_tkdYGwMz2lHdJuNu', "last_request_at" = '2010-07-30 16:43:24' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering opportunities/new
+Completed in 133ms (View: 7, DB: 1) | 200 OK [http://localhost/opportunities/new]
+
+
+Processing OpportunitiesController#create (for 127.0.0.1 at 2010-07-30 12:51:30) [POST]
+  Parameters: {"opportunity"=>{"commitment"=>"I'm willing to work on the implementation of this platform and to help mentor any students that want to help out. I could also design some independent studies for students who wanted to explore some particular aspect of CS by working on this project (e.g. security, database design, ...)", "approach"=>"The easiest approach is to build a website to collect proposed projects and allow groups and resources to coalesce around those projects. ", "title"=>"The Brandeis Idea Exchange", "user_id"=>"1", "impact"=>"If this becomes successful then many stakeholders will be impacted:\r\n * students will deepen their understanding of their major field of study by applying it to solve an important community problem and they will gain the experience of becoming a lifelong learner by picking up whatever else they need to know to get the job done.\r\n * the campus will begin to make more efficient use of information technology and will become producers as well as consumers of information technology\r\n * important community problems with begin to be resolved (when applicable) by appropriately use of new information technology\r\n", "description"=>"It is difficult to organize students, faculty, and staff around campus to undertake projects involving significant IT contributions.  There are many people with the requisite skills, and many others seeking solutions who have the means to contribute (either by hiring interns or supervising independent studies, or working on the project themselves, or paying a group to complete the project).\r\n\r\nWe will know that the project is successful when the number of students, faculty, and staff who have visited the site exceeds 500 and when the site is regularly used to bring people together to solve problems (e.g. at least 5 new projects initiated each semester)."}, "commit"=>"Create", "action"=>"create", "controller"=>"opportunities"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 16:51:30', "perishable_token" = 'YlXcZ19tW84AOdLXJChB', "last_request_at" = '2010-07-30 16:51:30' WHERE "id" = 1[0m
+  [4;35;1mOpportunity Create (0.3ms)[0m   [0mINSERT INTO "opportunities" ("approach", "commitment", "created_at", "title", "updated_at", "user_id", "description", "impact") VALUES('The easiest approach is to build a website to collect proposed projects and allow groups and resources to coalesce around those projects. ', 'I''m willing to work on the implementation of this platform and to help mentor any students that want to help out. I could also design some independent studies for students who wanted to explore some particular aspect of CS by working on this project (e.g. security, database design, ...)', '2010-07-30 16:51:30', 'The Brandeis Idea Exchange', '2010-07-30 16:51:30', 1, 'It is difficult to organize students, faculty, and staff around campus to undertake projects involving significant IT contributions. There are many people with the requisite skills, and many others seeking solutions who have the means to contribute (either by hiring interns or supervising independent studies, or working on the project themselves, or paying a group to complete the project).
+
+We will know that the project is successful when the number of students, faculty, and staff who have visited the site exceeds 500 and when the site is regularly used to bring people together to solve problems (e.g. at least 5 new projects initiated each semester).', 'If this becomes successful then many stakeholders will be impacted:
+ * students will deepen their understanding of their major field of study by applying it to solve an important community problem and they will gain the experience of becoming a lifelong learner by picking up whatever else they need to know to get the job done.
+ * the campus will begin to make more efficient use of information technology and will become producers as well as consumers of information technology
+ * important community problems with begin to be resolved (when applicable) by appropriately use of new information technology
+')[0m
+Redirected to http://localhost:3001/opportunities/1
+Completed in 33ms (DB: 1) | 302 Found [http://localhost/opportunities]
+
+
+Processing OpportunitiesController#show (for 127.0.0.1 at 2010-07-30 12:51:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.2ms)[0m   [0;1mSELECT * FROM "opportunities" WHERE ("opportunities"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering opportunities/show
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 16:51:30', "perishable_token" = 'O2TrxBvsGnA4_S35FRK3', "last_request_at" = '2010-07-30 16:51:30' WHERE "id" = 1[0m
+Completed in 35ms (View: 27, DB: 2) | 200 OK [http://localhost/opportunities/1]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 12:53:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 16:53:49', "perishable_token" = 'iIs7vM7XoCytUQhMinj7', "last_request_at" = '2010-07-30 16:53:49' WHERE "id" = 1[0m
+Completed in 65ms (View: 60, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-07-30 12:54:03) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '431d7a6ac9ece800db768ed0e3360a7d17c3b7a64989251e749493c33ce659f3198b38da52891c28e13f83b5bfa310f18fbe4959744fdac5692bdaa1bf7dbe69') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 16:54:03', "perishable_token" = 'UgDvpVl7OJAlwe42RtRd', "last_request_at" = '2010-07-30 16:54:03' WHERE "id" = 1[0m
+Redirected to http://localhost:3001/
+Completed in 22ms (DB: 1) | 302 Found [http://localhost/logout]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 12:54:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.5ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-30 12:54:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 96ms (View: 19, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-30 12:54:07) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"tjhickey724@gmail.com"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'tjhickey724@gmail.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 163ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-30 12:54:17) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"Tim"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'tim') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 23ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-30 12:54:24) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"tim"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'tim') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 86ms (View: 72, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-30 12:54:31) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"tjhickey724"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'tjhickey724') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "login_count" = 2, "updated_at" = '2010-07-30 16:54:31', "perishable_token" = 'za2usHmW97zQW6oOubmL', "last_request_at" = '2010-07-30 16:54:31', "last_login_at" = '2010-07-30 16:31:51', "last_login_ip" = '127.0.0.1', "current_login_at" = '2010-07-30 16:54:31' WHERE "id" = 1[0m
+Redirected to http://localhost:3001/account
+Completed in 85ms (DB: 1) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 12:54:31) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 16:54:31', "perishable_token" = 'yRxXlx3qcShg0KYSsqUw', "last_request_at" = '2010-07-30 16:54:31' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 54ms (View: 31, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-07-30 12:54:34) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 16:54:34', "perishable_token" = 'cBC0qRpJ8JTqXTC9teVE', "last_request_at" = '2010-07-30 16:54:34' WHERE "id" = 1[0m
+Redirected to http://localhost:3001/user_session/new
+Completed in 58ms (DB: 1) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-30 12:54:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 94ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-30 12:54:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.8ms)
+Completed in 26ms (View: 14, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-30 12:54:48) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"tim", "email"=>"tim@cs.brandeis.edu"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'tim@cs.brandeis.edu') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'tim') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'jiwaGIzn-Bx6mOw9TrHA') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "login", "last_login_at", "email") VALUES('jiwaGIzn-Bx6mOw9TrHA', '2010-07-30 16:54:48', '2010-07-30 16:54:48', '71e169e3a5894627832447579cc88b364a1aaf568b5aff0f25caea38257729d7c3392f0b31d6e9217a7e7645c4f83bc187fa4f5ddb3753752d570ae8fe56dcf7', '8EOq2rLYdgBrAPJ80YFl', '2010-07-30 16:54:48', 0, '127.0.0.1', 'vkLOneFE2GXFSKDmJI2o', '2010-07-30 16:54:48', 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d', 1, NULL, 'tim', NULL, 'tim@cs.brandeis.edu')[0m
+Redirected to http://localhost:3001/account
+Completed in 31ms (DB: 1) | 302 Found [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 12:54:48) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 16:54:48', "perishable_token" = 'omu5d835f6xf1sL-o7bT', "last_request_at" = '2010-07-30 16:54:48' WHERE "id" = 2[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 24ms (View: 2, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 12:57:13) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 16:57:14', "perishable_token" = 'jNvibwNEUjTdDfMNb2E0', "last_request_at" = '2010-07-30 16:57:14' WHERE "id" = 2[0m
+Rendering template within layouts/application
+Rendering users/show
+
+ActionView::TemplateError (opportunity_url failed to generate from {:action=>"show", :controller=>"opportunities"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["opportunities", :id] - are they all satisfied?) on line #20 of app/views/layouts/application.html.erb:
+17:     <%= link_to "Register", new_user_path %> |
+18:     <%= link_to "Login", login_path %>
+19:   <% end %>
+20:     <br/> <%= lin_to "Home", opportunity_path %>
+21: </div>
+22: 
+23: <div id="mainheader">
+
+    (eval):17:in `opportunity_path'
+    app/views/layouts/application.html.erb:20
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (40.9ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 12:57:47) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 16:57:47', "perishable_token" = 'DqxOOHkKwWgtm2dc12cV', "last_request_at" = '2010-07-30 16:57:47' WHERE "id" = 2[0m
+Rendering template within layouts/application
+Rendering users/show
+
+ActionView::TemplateError (undefined local variable or method `index_opportunity_path' for #<ActionView::Base:0x103038000>) on line #20 of app/views/layouts/application.html.erb:
+17:     <%= link_to "Register", new_user_path %> |
+18:     <%= link_to "Login", login_path %>
+19:   <% end %>
+20:     <br/> <%= lin_to "Home", index_opportunity_path %>
+21: </div>
+22: 
+23: <div id="mainheader">
+
+    app/views/layouts/application.html.erb:20
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (35.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 12:57:58) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 16:57:58', "perishable_token" = 'H_MFbOyLXX3bqe8gswOg', "last_request_at" = '2010-07-30 16:57:58' WHERE "id" = 2[0m
+Rendering template within layouts/application
+Rendering users/show
+
+ActionView::TemplateError (undefined local variable or method `show_opportunity_path' for #<ActionView::Base:0x1030f9e08>) on line #20 of app/views/layouts/application.html.erb:
+17:     <%= link_to "Register", new_user_path %> |
+18:     <%= link_to "Login", login_path %>
+19:   <% end %>
+20:     <br/> <%= lin_to "Home", show_opportunity_path %>
+21: </div>
+22: 
+23: <div id="mainheader">
+
+    app/views/layouts/application.html.erb:20
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (37.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 12:58:33) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 16:58:33', "perishable_token" = '_z7AUTK_uWPVKVJhXXAn', "last_request_at" = '2010-07-30 16:58:33' WHERE "id" = 2[0m
+Rendering template within layouts/application
+Rendering users/show
+
+ActionView::TemplateError (undefined method `lin_to' for #<ActionView::Base:0x1031c30c8>) on line #20 of app/views/layouts/application.html.erb:
+17:     <%= link_to "Register", new_user_path %> |
+18:     <%= link_to "Login", login_path %>
+19:   <% end %>
+20:     <br/> <%= lin_to "Home", root_path %>
+21: </div>
+22: 
+23: <div id="mainheader">
+
+    app/views/layouts/application.html.erb:20
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (116.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 12:58:42) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 16:58:42', "perishable_token" = 'TIUXmMTHowd81OLf5Vhn', "last_request_at" = '2010-07-30 16:58:42' WHERE "id" = 2[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 64ms (View: 5, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 13:00:01) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 17:00:01', "perishable_token" = 'uEZ9DTBp-9uksxBC9Y2T', "last_request_at" = '2010-07-30 17:00:01' WHERE "id" = 2[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 38ms (View: 18, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 13:00:21) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 17:00:21', "perishable_token" = 'qYiBwWbK7VAaaz0RJZ7r', "last_request_at" = '2010-07-30 17:00:21' WHERE "id" = 2[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 137ms (View: 2, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 13:01:12) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 17:01:12', "perishable_token" = 'S_l3TTonBh2olcmmOVAz', "last_request_at" = '2010-07-30 17:01:12' WHERE "id" = 2[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 33ms (View: 6, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 13:02:16) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 17:02:16', "perishable_token" = 'd_eu0mUyCoBbeKsU0K82', "last_request_at" = '2010-07-30 17:02:16' WHERE "id" = 2[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 58ms (View: 14, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 13:02:50) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 17:02:51', "perishable_token" = 'clmft-ZbxyqTw3X6oLLR', "last_request_at" = '2010-07-30 17:02:51' WHERE "id" = 2[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 22ms (View: 2, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 13:03:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 17:03:03', "perishable_token" = 'neCbPKLOmDSJ1SpR7fHi', "last_request_at" = '2010-07-30 17:03:03' WHERE "id" = 2[0m
+Completed in 71ms (View: 65, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 13:03:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.5ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 17:03:34', "perishable_token" = 'WHTDJfJAtVKq_OFRk2Qq', "last_request_at" = '2010-07-30 17:03:34' WHERE "id" = 2[0m
+Completed in 68ms (View: 63, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 13:04:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.6ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 17:04:08', "perishable_token" = 'zBbgKdPajTzqWryPdorW', "last_request_at" = '2010-07-30 17:04:08' WHERE "id" = 2[0m
+Completed in 137ms (View: 131, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 13:05:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (9.8ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (11.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 17:05:26', "perishable_token" = 'q78EYZGda5opFlC0i0pM', "last_request_at" = '2010-07-30 17:05:26' WHERE "id" = 2[0m
+Completed in 57ms (View: 31, DB: 22) | 200 OK [http://localhost/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 13:05:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 17:05:40', "perishable_token" = 'HMW2iKoEfP4o8oTaYTVP', "last_request_at" = '2010-07-30 17:05:40' WHERE "id" = 2[0m
+Completed in 64ms (View: 59, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 13:05:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.5ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 17:05:56', "perishable_token" = 'LgqrinLwd_QiYPoxgvQ6', "last_request_at" = '2010-07-30 17:05:56' WHERE "id" = 2[0m
+Completed in 70ms (View: 64, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 13:06:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 17:06:15', "perishable_token" = '2prgV7g1EWhT54pxv71r', "last_request_at" = '2010-07-30 17:06:15' WHERE "id" = 2[0m
+Completed in 71ms (View: 66, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 13:07:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.6ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 17:07:12', "perishable_token" = 'Mjztwh0k9eX6E5J1D57u', "last_request_at" = '2010-07-30 17:07:12' WHERE "id" = 2[0m
+Completed in 149ms (View: 143, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 13:07:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 17:07:31', "perishable_token" = 'vfoKvvJ77I1nCnDvM_k6', "last_request_at" = '2010-07-30 17:07:31' WHERE "id" = 2[0m
+Completed in 91ms (View: 86, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 15:35:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (10.9ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 19:35:44', "perishable_token" = 'tx4GPI5_s4p51aQ9JYHG', "last_request_at" = '2010-07-30 19:35:44' WHERE "id" = 2[0m
+Completed in 129ms (View: 113, DB: 12) | 200 OK [http://localhost/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 15:36:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 19:36:01', "perishable_token" = 'Hc_LqR78GwHgE3uy386Y', "last_request_at" = '2010-07-30 19:36:01' WHERE "id" = 2[0m
+Completed in 75ms (View: 69, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 15:36:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;36;1mOpportunity Load (0.5ms)[0m   [0;1mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'e379c943408a381cbaa5ca4bc7e8220a71d7f99620806980e1d58456b68155996077f9be3276160260f1739aeddf601dd7435dce4fe84cc8054711587fe6331d') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-07-30 19:36:13', "perishable_token" = 'Uay8D8brdj6lIUyA1qUj', "last_request_at" = '2010-07-30 19:36:13' WHERE "id" = 2[0m
+Completed in 75ms (View: 70, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing OpportunitiesController#index (for 127.0.0.1 at 2010-07-30 15:36:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"opportunities"}
+  [4;35;1mOpportunity Load (0.5ms)[0m   [0mSELECT * FROM "opportunities" [0m
+Rendering template within layouts/application
+Rendering opportunities/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-30 15:36:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+Redirected to http://localhost:3001/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/opportunities/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-07-30 15:36:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 63ms (View: 51, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-07-30 15:37:02) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"tim"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'tim') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "login_count" = 2, "updated_at" = '2010-07-30 19:37:02', "perishable_token" = 'BxF3poDA8_ICEymEKm02', "last_request_at" = '2010-07-30 19:37:02', "last_login_at" = '2010-07-30 16:54:48', "last_login_ip" = '127.0.0.1', "current_login_at" = '2010-07-30 19:37:02' WHERE "id" = 2[0m
+Redirected to http://localhost:3001/opportunities/new
+Completed in 25ms (DB: 1) | 302 Found [http://localhost/user_session]
+
+
+Processing OpportunitiesController#new (for 127.0.0.1 at 2010-07-30 15:37:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"opportunities"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-30 19:37:02', "perishable_token" = 'wQg-Vd1U45DhQXacX0cN', "last_request_at" = '2010-07-30 19:37:02' WHERE "id" = 2[0m
+Rendering template within layouts/application
+Rendering opportunities/new
+Completed in 32ms (View: 7, DB: 1) | 200 OK [http://localhost/opportunities/new]

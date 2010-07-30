@@ -1,1 +1,1 @@
-authlogic --version '2.1.5'
+authlogic --version '2.1.5' --source gems.github.com
