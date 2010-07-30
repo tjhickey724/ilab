@@ -1,0 +1,119 @@
+/* GENERAL ELEMENTS */
+
+* { margin: 0; padding: 0; }
+
+body, input, select, textarea { font-family: verdana, arial, helvetica, sans-serif; font-size: 11px; }
+body { color: #333;  background-color: #fff; text-align: center; }
+
+a:link { color:#0060BF; text-decoration: underline; }
+a:visited { color:#0060BF; text-decoration: underline; }
+a:active { color:#0060BF; text-decoration: underline; }
+a:hover { color:#000000; text-decoration: underline; }
+	
+h1, h2, h3, h4, h5, h6 { font-family: "Lucida Grande", "Lucida Sans Unicode", geneva, verdana, arial, helvetica, sans-serif; font-weight: bold; color: #666; }
+h1 { font-size: 1.8em; margin: 0em 0em 0.6em 0em; color: #EC5800; }
+h2 { font-size: 1.5em; margin: 1.2em 0em 0.4em 0em; }
+h3 { font-size: 1.4em; margin: 1.2em 0em 0.4em 0em; color: #EC5800; }
+h4 { font-size: 1.2em; margin: 1.2em 0em 0.4em 0em; }
+h5 { font-size: 1.0em; margin: 1.2em 0em 0.4em 0em; }
+h6 { font-size: 0.8em; margin: 1.2em 0em 0.4em 0em; }
+
+img { border: 0px; }
+
+p { font-size: 1.0em; line-height: 1.3em; margin: 1.2em 0em 1.2em 0em; }
+li > p { margin-top: 0.2em; }
+pre { font-family: monospace; font-size: 1.0em; }
+strong, b { font-weight: bold; }
+
+* PAGE ELEMENTS */
+
+/* Content */
+
+#content { margin: 0em auto; width: 765px; padding: 10px 0 10px 0; text-align: left; /* Win IE5 */ }
+.content { margin-left: 4.5em; margin-right: 4.5em; }
+.content ol, .content ul, .content li { font-size: 1.0em; line-height: 1.3em; margin: 0.2em 0 0.1em 1.5em; }
+.content ol.terms li { margin-bottom: 1em; }
+
+/* Header */
+
+#header { padding-bottom: 10em; }
+#headerlogo { float: left; }
+#headerlogo img { width: 188px; height: 83px;  }
+#headernav { float: right; }
+
+/* Footer */
+
+#footer { padding-top: 3em; padding-bottom: 2em; }
+#footercontent { float: left; display: inline; color: #959595; }
+#footerfeedback { float: right; display: inline; margin: 0; padding: 0; }
+#footerfeedbackimg { padding-top: 0.2em; }
+.footerfeedbacktext { vertical-align: top; }
+
+/* Top right navigation */
+
+#navlist { float: right; margin-top: -50px; margin-bottom: 10px; margin-right: -20px; width: 150px; }
+#navlist ul { list-style: none; margin: 0; padding: 0; }
+#navlist ul li { background-image: url("/img/ico/ico_check_med_lbl.gif"); background-repeat: no-repeat; background-position: 0em 0.2em; padding-left: 22px; padding-bottom: 0.4em; font-size: 1.0em; font-weight: bold; }
+
+.greyborder { border-style: solid; border-width: 1px; border-color: #CACACA; margin-top: 8px; margin-bottom: 8px; margin-left: 25px; }
+
+.statusmsgbox { padding-bottom: 20px; }
+
+.narrow1{ width: 50%; line-height: 1.3em; }
+.narrow2{ width: 50%; line-height: 1.5em; }
+
+#detailstabs ul, #listtabs ul, #detailstabs li, #listtabs li, #signuptab ul, #signuptab li,
+#logintab ul, #logintab li, #forgottab ul, #forgottab li, #passwordtab ul, #passwordtab li,
+#verifytab ul, #verifytab li { line-height: 1.8em; }
+
+label { font-weight: bold; }
+#reminders label { font-weight: normal; }
+
+
+.bodytext {
+	font-size: 1.3em;
+	line-height: 1.5;
+	margin: 1em 0;
+	width: 50%;
+}
+
+.appheader {
+	
+}
+
+.demoHeaders {
+	margin-top: 2em;
+}
+
+#dialog_link {
+	padding: .4em 1em .4em 20px;
+	text-decoration: none;
+	position: relative;
+}
+
+#dialog_link span.ui-icon {
+	margin: 0 5px 0 0;
+	position: absolute;
+	left: .2em;
+	top: 50%;
+	margin-top: -8px;
+}
+
+ul#icons {
+	margin: 0;
+	padding: 0;
+}
+
+ul#icons li {
+	margin: 2px;
+	position: relative;
+	padding: 4px 0;
+	cursor: pointer;
+	float: left;
+	list-style: none;
+}
+
+ul#icons span.ui-icon {
+	float: left;
+	margin: 0 4px;
+}

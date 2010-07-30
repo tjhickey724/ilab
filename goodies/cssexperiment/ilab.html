@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Idea Lab @ Brandeis</title>
+		<link type="text/css" href="css/smoothness/jquery-ui-1.8.2.custom.css" rel="stylesheet" />
+		<link type="text/css" href="ilab.css" rel="stylesheet" />
+		
+		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+
+				// Accordion
+				$("#accordion").accordion({ header: "h3" });
+	
+				// Tabs
+				$('#tabs').tabs();
+	
+
+				// Dialog			
+				$('#dialog').dialog({
+					autoOpen: false,
+					width: 600,
+					buttons: {
+						"Ok": function() { 
+							$(this).dialog("close"); 
+						}, 
+						"Cancel": function() { 
+							$(this).dialog("close"); 
+						} 
+					}
+				});
+				
+				// Dialog Link
+				$('#dialog_link').click(function(){
+					$('#dialog').dialog('open');
+					return false;
+				});
+
+				// Datepicker
+				$('#datepicker').datepicker({
+					inline: true
+				});
+				
+				// Slider
+				$('#slider').slider({
+					range: true,
+					values: [17, 67]
+				});
+				
+				// Progressbar
+				$("#progressbar").progressbar({
+					value: 20 
+				});
+				
+				//hover states on the static widgets
+				$('#dialog_link, ul#icons li').hover(
+					function() { $(this).addClass('ui-state-hover'); }, 
+					function() { $(this).removeClass('ui-state-hover'); }
+				);
+				
+			});
+		</script>
+	</head>
+	<body>
+	  <div id="content">
+	    <div id="appheader">
+	      <a href="/">
+	        <div id="appheaderlogo">
+	        </div>
+	      <div id="topnav">
+	        <div id="viewselector">
+	          <a href="/">Foo</a>
+	          <a href="/">Bar</a>
+	        </div>
+	          
+	      
+	  <h1>Welcome to iLab</h1>
+	  <h2>Learning by Making Change</h2>
+	  <p class="bodytext">The Idea Lab at Brandeis (ILaB) is a new pedagogical effort in which Computer Science students will learn to make positive change in the world by applying the knowledge and skills they have developed in their academic classes. Students will sign up for internships or independent studies and will be mentored by faculty in how to work collaboratively to solve community problems using CS techniques.</p>
+    </body>
+    </html>
