@@ -1,6 +1,21 @@
-<h1 class="main">Idea Lab at Brandeis<br/> Project Page</h1>
-This page lists the most recent project requests that have been submitted to the IdeaLab.
-You can submit your own project request at <a href="new.html">this link</a> provided you are logged in.
+<h1 class="main">Project Page</h1>
+<p>
+This page lists the most recent project requests that have been submitted to the IdeaLab. You can join a google group
+to discuss the idea lab as well as individual idea lab projects by visiting
+<a href="http://groups.google.com/group/idea-lab-at-brandeis/topics?hl=en">http://groups.google.com/group/idea-lab-at-brandeis/topics?hl=en</a>
+During August of 2010 we will add a commenting feature to this site so that people can comment directly on projects. Also, we will have the
+interactions on this site posted onto the google groups site so that members who are so inclined can have more in depth discussion
+of the posted projects and comments.
+</p>
+<hr/>
+<p>
+	Right now this website is in an alpha stage, so don't put too much time into it, but feel free to play with the interface
+	and you can send any suggestions you might have to <a href="mailto:tjhickey@brandeis.edu">tjhickey@brandeis.edu</a>.
+</p>
+<hr/>
+<h2 style="text-align:right">
+ <%= link_to 'Submit your own project', new_opportunity_path %> 
+ </h2>
 <ul> 
 <% @opportunities.each do |opportunity| %>
 <li>

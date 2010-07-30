@@ -4,6 +4,8 @@ body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
+  margin:0px;
+  padding:0px;
 }
 
 pre {
@@ -57,6 +59,11 @@ a:hover { color: #fff; background-color:#000; }
 #user_nav {
   float: right;
   font-size: 12px;
+  background:white;
+  color:black;
+  border:thick double blue;
+  margin: 10px;
+  padding:10px;
 }
 
 div.opportunity {
@@ -66,7 +73,7 @@ div.opportunity {
 	background:rgb(245,255,245);
 }
 
-h1.main {
+h1.main2 {
 	text-align:center;
 	background:rgb(0,0,100);
 	color:white;
@@ -75,4 +82,18 @@ h1.main {
 	border:5px double blue;
 	font: bold 30pt/40pt Helvetica,sans-serif;
 	clear:both;
+}
+
+div#mainheader {
+	background:rgb(0,0,100);
+	margin:0px;
+	padding:30px;
+	color:white;
+	font:bold 30pt Helvetica,sans-serif;
+}
+
+div#body {
+	margin:0px 20px;
+	padding:20px;
+	border-left: 25px double rgb(0,100,0);
 }
